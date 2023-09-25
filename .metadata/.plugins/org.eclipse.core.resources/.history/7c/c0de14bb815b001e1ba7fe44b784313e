@@ -1,0 +1,16 @@
+
+public class Main {
+
+	static int summe;
+
+	public static void main(String[] args) {
+		System.out.println("Main wird ausgefuehrt");
+		for (int i = 0; i < args.length; i++) {
+			System.out.println(Integer.parseInt(args[i]));
+				summe = summe + Integer.parseInt(args[i]);
+		}
+		System.out.println("Die Summe lautet: " + summe);
+		System.out.println("Main wurde beendet");
+	}
+
+}
