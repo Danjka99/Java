@@ -13,6 +13,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Main"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="ErstesProjektMitParameter"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="1 2 F G 5"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="11"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ErstesProjektMitParameter"/>
 </launchConfiguration>

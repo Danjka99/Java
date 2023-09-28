@@ -1,12 +1,12 @@
 
-a	java:S106"+Replace this use of System.out by a logger.(ÆĞÅşÿÿÿÿ8İ¶¶Ü¬1H0RMAJORZ
+[	java:S106"+Replace this use of System.out by a logger.(—ÖÀ”ÿÿÿÿÿHËRMAJORZ
 CODE_SMELL
-Z	java:S106"+Replace this use of System.out by a logger.(Æ‡³ÆÿÿÿÿÿH3RMAJORZ
+V	java:S106"+Replace this use of System.out by a logger.(„“ HÌRMAJORZ
 CODE_SMELL
-E
-java:S1220""Move this file to a named package.HRMINORZ
+F
+java:S1220""Move this file to a named package.HÍRMINORZ
 CODE_SMELL
-U	java:S106"+Replace this use of System.out by a logger.(„“ HRMAJORZ
+b	java:S106"+Replace this use of System.out by a logger.(ÆĞÅşÿÿÿÿ8İ¶¶Ü¬1HÎRMAJORZ
 CODE_SMELL
-Z	java:S106"+Replace this use of System.out by a logger.(—ÖÀ”ÿÿÿÿÿH.RMAJORZ
+[	java:S106"+Replace this use of System.out by a logger.(Æ‡³ÆÿÿÿÿÿHÏRMAJORZ
 CODE_SMELL
