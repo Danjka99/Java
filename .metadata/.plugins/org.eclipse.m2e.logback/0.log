@@ -2962,3 +2962,206 @@ java.lang.reflect.InaccessibleObjectException: Unable to make public void sun.ni
 2023-12-11 11:10:14,968 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2023-12-11 11:10:14,970 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
 2023-12-11 11:17:52,711 [ForkJoinPool.commonPool-worker-85] INFO  j.exodus.util.CompressBackupUtil - Backup file "local_only_issue_backup2023-12-11-11-17-52.tar.gz" created.
+2023-12-14 11:45:23,087 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-12-14 11:45:23,822 [ForkJoinPool.commonPool-worker-2] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sonarLintSpringAppConfig' of type [org.sonarsource.sonarlint.core.spring.SonarLintSpringAppConfig$$EnhancerBySpringCGLIB$$f5e700] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-14 11:45:23,869 [ForkJoinPool.commonPool-worker-2] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'provideClientEventBus' of type [com.google.common.eventbus.AsyncEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-14 11:45:40,588 [ForkJoinPool.commonPool-worker-2] INFO  jetbrains.exodus.io.FileDataWriter - Interruptible file channel will be used
+java.lang.reflect.InaccessibleObjectException: Unable to make public void sun.nio.ch.FileChannelImpl.setUninterruptible() accessible: module java.base does not "exports sun.nio.ch" to unnamed module @4ed86487
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:391)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:367)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:315)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:203)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:197)
+	at jetbrains.exodus.io.FileDataWriter$Companion$setUninterruptibleMethod$1.invoke(FileDataWriter.kt:188)
+	at jetbrains.exodus.io.FileDataWriter$Companion$setUninterruptibleMethod$1.invoke(FileDataWriter.kt:185)
+	at jetbrains.exodus.util.UnsafeHolder.doPrivileged$lambda-0(UnsafeHolder.kt:30)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at jetbrains.exodus.util.UnsafeHolder.doPrivileged(UnsafeHolder.kt:29)
+	at jetbrains.exodus.io.FileDataWriter.<clinit>(FileDataWriter.kt:185)
+	at jetbrains.exodus.io.FileDataReaderWriterProvider.newFileDataWriter(FileDataReaderWriterProvider.kt:48)
+	at jetbrains.exodus.io.FileDataReaderWriterProvider.newReaderWriter(FileDataReaderWriterProvider.kt:30)
+	at jetbrains.exodus.log.LogConfig.createReaderWriter(LogConfig.java:359)
+	at jetbrains.exodus.log.LogConfig.getReader(LogConfig.java:125)
+	at jetbrains.exodus.log.Log.<init>(Log.kt:52)
+	at jetbrains.exodus.env.Environments.newLogInstance(Environments.kt:117)
+	at jetbrains.exodus.env.Environments.newLogInstance(Environments.kt:81)
+	at jetbrains.exodus.env.Environments.newLogInstance(Environments.kt:77)
+	at jetbrains.exodus.env.Environments$newInstance$4.invoke(Environments.kt:46)
+	at jetbrains.exodus.env.Environments$newInstance$4.invoke(Environments.kt:46)
+	at jetbrains.exodus.env.Environments.prepare(Environments.kt:120)
+	at jetbrains.exodus.env.Environments.newInstance(Environments.kt:46)
+	at org.sonarsource.sonarlint.core.local.only.XodusLocalOnlyIssueStore.buildEntityStore(XodusLocalOnlyIssueStore.java:201)
+	at org.sonarsource.sonarlint.core.local.only.XodusLocalOnlyIssueStore.<init>(XodusLocalOnlyIssueStore.java:94)
+	at org.sonarsource.sonarlint.core.local.only.LocalOnlyIssueStorageService.get(LocalOnlyIssueStorageService.java:49)
+	at org.sonarsource.sonarlint.core.local.only.LocalOnlyIssueStorageService.purgeOldIssues(LocalOnlyIssueStorageService.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.sonarsource.sonarlint.shaded.org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.sonarsource.sonarlint.shaded.org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.sonarsource.sonarlint.core.SonarLintBackendImpl.lambda$initialize$2(SonarLintBackendImpl.java:63)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2023-12-14 11:45:40,591 [ForkJoinPool.commonPool-worker-2] WARN  jetbrains.exodus.io.FileDataWriter - Can't open directory channel. Log directory fsync won't be performed.
+2023-12-14 11:45:40,767 [ForkJoinPool.commonPool-worker-2] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\d.jakob\.sonarlint\xodus-local-only-issue-store15255237983292514291
+2023-12-14 11:45:40,770 [ForkJoinPool.commonPool-worker-2] INFO  j.exodus.gc.GarbageCollector - Queueing ComputeUtilizationFromScratchJob
+2023-12-14 11:45:50,581 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Started calculation of log utilization from scratch at C:\Users\d.jakob\.sonarlint\xodus-local-only-issue-store15255237983292514291
+2023-12-14 11:45:50,591 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Finished calculation of log utilization from scratch at C:\Users\d.jakob\.sonarlint\xodus-local-only-issue-store15255237983292514291
+2023-12-14 12:02:31,259 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:02:31,268 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:02:31,271 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:02:35,798 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-12-14 12:02:35,798 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-12-14 12:02:35,800 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:03:59,067 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-12-14 12:03:59,067 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-12-14 12:03:59,069 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:12:24,488 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:12:24,495 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:12:24,499 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:13:00,407 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:13:00,413 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:13:00,415 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:15:15,090 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:15:15,095 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:15:15,097 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:24:04,109 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:24:04,116 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:24:04,118 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:26:21,234 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:26:21,240 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:26:21,243 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:28:06,759 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:28:06,765 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:28:06,767 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:28:29,508 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:28:29,513 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:28:29,515 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:31:21,850 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:31:21,855 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:31:21,857 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:36:42,322 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:36:42,328 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:36:42,330 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:37:36,843 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:37:36,848 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:37:36,851 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:38:20,806 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:38:20,811 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:38:20,814 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:38:34,249 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:38:34,256 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:38:34,259 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:39:17,524 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:39:17,529 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:39:17,530 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:41:19,995 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:41:20,001 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-14 12:41:20,002 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\d.jakob\Documents\springbootminimal\src\test\resources
+2023-12-14 12:58:08,794 [ForkJoinPool.commonPool-worker-45] INFO  j.exodus.util.CompressBackupUtil - Backup file "local_only_issue_backup2023-12-14-12-58-08.tar.gz" created.
+2023-12-14 12:58:19,722 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-12-14 12:58:20,348 [ForkJoinPool.commonPool-worker-1] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sonarLintSpringAppConfig' of type [org.sonarsource.sonarlint.core.spring.SonarLintSpringAppConfig$$EnhancerBySpringCGLIB$$6f2c56ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-14 12:58:20,375 [ForkJoinPool.commonPool-worker-1] INFO  o.s.s.s.o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'provideClientEventBus' of type [com.google.common.eventbus.AsyncEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-12-14 12:58:36,775 [ForkJoinPool.commonPool-worker-1] INFO  jetbrains.exodus.io.FileDataWriter - Interruptible file channel will be used
+java.lang.reflect.InaccessibleObjectException: Unable to make public void sun.nio.ch.FileChannelImpl.setUninterruptible() accessible: module java.base does not "exports sun.nio.ch" to unnamed module @3014f0af
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:391)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:367)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:315)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:203)
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:197)
+	at jetbrains.exodus.io.FileDataWriter$Companion$setUninterruptibleMethod$1.invoke(FileDataWriter.kt:188)
+	at jetbrains.exodus.io.FileDataWriter$Companion$setUninterruptibleMethod$1.invoke(FileDataWriter.kt:185)
+	at jetbrains.exodus.util.UnsafeHolder.doPrivileged$lambda-0(UnsafeHolder.kt:30)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at jetbrains.exodus.util.UnsafeHolder.doPrivileged(UnsafeHolder.kt:29)
+	at jetbrains.exodus.io.FileDataWriter.<clinit>(FileDataWriter.kt:185)
+	at jetbrains.exodus.io.FileDataReaderWriterProvider.newFileDataWriter(FileDataReaderWriterProvider.kt:48)
+	at jetbrains.exodus.io.FileDataReaderWriterProvider.newReaderWriter(FileDataReaderWriterProvider.kt:30)
+	at jetbrains.exodus.log.LogConfig.createReaderWriter(LogConfig.java:359)
+	at jetbrains.exodus.log.LogConfig.getReader(LogConfig.java:125)
+	at jetbrains.exodus.log.Log.<init>(Log.kt:52)
+	at jetbrains.exodus.env.Environments.newLogInstance(Environments.kt:117)
+	at jetbrains.exodus.env.Environments.newLogInstance(Environments.kt:81)
+	at jetbrains.exodus.env.Environments.newLogInstance(Environments.kt:77)
+	at jetbrains.exodus.env.Environments$newInstance$4.invoke(Environments.kt:46)
+	at jetbrains.exodus.env.Environments$newInstance$4.invoke(Environments.kt:46)
+	at jetbrains.exodus.env.Environments.prepare(Environments.kt:120)
+	at jetbrains.exodus.env.Environments.newInstance(Environments.kt:46)
+	at org.sonarsource.sonarlint.core.local.only.XodusLocalOnlyIssueStore.buildEntityStore(XodusLocalOnlyIssueStore.java:201)
+	at org.sonarsource.sonarlint.core.local.only.XodusLocalOnlyIssueStore.<init>(XodusLocalOnlyIssueStore.java:94)
+	at org.sonarsource.sonarlint.core.local.only.LocalOnlyIssueStorageService.get(LocalOnlyIssueStorageService.java:49)
+	at org.sonarsource.sonarlint.core.local.only.LocalOnlyIssueStorageService.purgeOldIssues(LocalOnlyIssueStorageService.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.sonarsource.sonarlint.shaded.org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.sonarsource.sonarlint.shaded.org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.sonarsource.sonarlint.shaded.org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.sonarsource.sonarlint.core.SonarLintBackendImpl.lambda$initialize$2(SonarLintBackendImpl.java:63)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2023-12-14 12:58:36,777 [ForkJoinPool.commonPool-worker-1] WARN  jetbrains.exodus.io.FileDataWriter - Can't open directory channel. Log directory fsync won't be performed.
+2023-12-14 12:58:36,958 [ForkJoinPool.commonPool-worker-1] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\d.jakob\.sonarlint\xodus-local-only-issue-store17161447351339231662
+2023-12-14 12:58:36,959 [ForkJoinPool.commonPool-worker-1] INFO  j.exodus.gc.GarbageCollector - Queueing ComputeUtilizationFromScratchJob
+2023-12-14 12:58:46,774 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Started calculation of log utilization from scratch at C:\Users\d.jakob\.sonarlint\xodus-local-only-issue-store17161447351339231662
+2023-12-14 12:58:46,787 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Finished calculation of log utilization from scratch at C:\Users\d.jakob\.sonarlint\xodus-local-only-issue-store17161447351339231662
+2023-12-14 12:58:52,559 [ForkJoinPool.commonPool-worker-1] INFO  j.exodus.util.CompressBackupUtil - Backup file "local_only_issue_backup2023-12-14-12-58-52.tar.gz" created.
